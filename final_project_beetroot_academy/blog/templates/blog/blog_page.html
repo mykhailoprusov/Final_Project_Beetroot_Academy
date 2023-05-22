@@ -1,0 +1,23 @@
+{% extends "blog/base.html "%}
+
+
+{% block content %}
+    <div class="md-4">
+      <a class="btn-lg btn-primary" href="{% url 'blog-create' %}" role="button">New Post</a>
+    </div>
+{% for post in posts %}
+    <article class="bg-light">
+    <h1> <a href="{% url 'post-details' post.id %}"> {{ post.title }} </a> </h1>
+    <small> {{ post.date_posted }}, <a href="{% url 'post-profile' post.author.profile.id %}"> {{ post.author }} </a> </small>
+    <p> {{ post.content }}</p>
+    </article>
+{% endfor %}
+
+{% endblock content%}
+
+<style>
+.bg-light {
+  background-color: #f8f9fa; /* light grey color */
+}
+
+</style>

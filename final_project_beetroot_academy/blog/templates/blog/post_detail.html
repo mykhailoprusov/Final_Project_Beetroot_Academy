@@ -1,0 +1,13 @@
+{% extends "blog/base.html "%}
+
+{% block content %}
+
+    <p> {{ post.content }}</p>
+    <p> {{ post.date_posted }}</p>
+    <p> {{ post.author }}</p>
+
+    {% if object.author == user %}
+    <a class="btn btn-primary btn-lg" role="button" aria-pressed="true" href="{% url 'post-update' object.id %}"> Update </a>
+    <a class="btn btn-danger btn-lg" role="button" aria-pressed="true" href="{% url 'post-delete' object.id %}"> Delete </a>
+    {% endif %}
+{% endblock content%}

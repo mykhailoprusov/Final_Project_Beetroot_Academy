@@ -1,0 +1,37 @@
+{% extends "blog/base.html "%}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h2> {{ user.username }}</h2>
+
+<img class ="rounded-circle account-img" src="{{ user.profile.img.url }}" alt="profile icon">
+
+<p>email: {{user.email}}</p>
+
+{% if user.profile.country %}
+<p>country: {{user.profile.country}}</p>
+{% endif %}
+
+{% if user.profile.birthday %}
+<p>birthday: {{user.profile.birthday}}</p>
+{% endif %}
+
+{% if user.profile.about %}
+<p>About: {{user.profile.about}}</p>
+{% endif %}
+
+<hr>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset>
+        <legend> <small>Update your profile </small></legend>
+
+        {{user_form|crispy}}
+        {{prof_form|crispy}}
+
+    </fieldset>
+    <button type="submit"> Update </button>
+</form>
+{% endblock content%}

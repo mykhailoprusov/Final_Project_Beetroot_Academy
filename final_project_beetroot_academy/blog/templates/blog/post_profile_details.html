@@ -1,0 +1,20 @@
+{% extends "blog/base.html "%}
+
+{% block content %}
+
+    <p> {{ profile.user.username }}</p>
+    <p> {{ profile.user.email }}</p>
+
+    {% if profile.country %}
+    <p>country: {{profile.country}}</p>
+    {% endif %}
+
+    {% if profile.birthday %}
+    <p>birthday: {{profile.birthday}}</p>
+    {% endif %}
+
+    {% if profile.about %}
+    <p>About: {{profile.about}}</p>
+    {% endif %}
+
+{% endblock content%}
