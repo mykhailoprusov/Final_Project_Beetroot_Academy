@@ -31,6 +31,7 @@ directory that has such data:
     
 
 }
+Make sure to replace the empty values (`""`, ` `) with the actual values for your configuration.
 
 
 
