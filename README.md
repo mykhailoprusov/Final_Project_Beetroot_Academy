@@ -16,7 +16,7 @@ templates for login, logout, registration and profile, views etc. ), Media app -
 ### Installation and Setup:
 You need to have a token file inside the blog app that has ChatGPT token to run the web application. Also you need to have a config_data.json file in the root
 directory that has such data:
-'''
+'''json
 {
     "default": {
         "ENGINE": "",
