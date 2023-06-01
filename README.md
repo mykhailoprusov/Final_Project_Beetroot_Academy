@@ -34,13 +34,13 @@ directory that has such data:
 Make sure to replace the empty values (`""`, ` `) with the actual values for your configuration.
 ```
 ##### Library requirements:
-Pillow
-requests
-openai
-psycopg2
-django
-django-bootstrap4
-crispy-bootstrap4
+Pillow,
+requests,
+openai,
+psycopg2,
+django,
+django-bootstrap4,
+crispy-bootstrap4,
 django-crispy-forms
 
 
